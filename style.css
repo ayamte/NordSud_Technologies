@@ -1,0 +1,648 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    color: white;
+    background: url('assets/background.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.playfair {
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 40px;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Plus aucune couleur de fond, ni blur, ni ombre */
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    transition: 0.5s;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+}
+
+.logo img {
+    height: 10vw;
+    max-height: 80px;
+    width: auto;
+}
+
+/* wrapper pour déplacer menu + bouton à droite */
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-left: auto;
+}
+
+/* navbar (menu central) */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    list-style: none;
+}
+
+/* liens */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: border 0.2s;
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+.arrow {
+    font-size: 0.8em;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+/* BOUTON CONTACT */
+.btn-contact {
+    padding: 10px 50px;
+    background: transparent;
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.btn-contact:hover {
+    background: linear-gradient(90deg, #64B44D 0%, #3370B7 100%);
+    color: white;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 10vw;
+    }
+    .nav-wrapper {
+        gap: 30px;
+        margin: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .navbar {
+        gap: 25px;
+    }
+    .btn-contact {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 10px 3vw;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo img {
+        height: 44px;
+    }
+    .navbar a,
+    .btn-contact {
+        font-size: 1rem;
+        padding: 8px 18px;
+    }
+}
+
+
+.banniere{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Supprime tous les margins */
+    padding: 0; /* Supprime tous les paddings */
+    transform: translateY(-100px);
+}
+
+.banniere-img {
+    position: absolute;
+    width: 80px;  /* adapte la taille à tes besoins */
+    height: auto;
+    z-index: 1;   /* pour passer sous le texte, ou ajuste */
+    pointer-events: none; /* les images ne bloquent pas les clics */
+}
+
+.img4 {
+    width: 64px;
+    height: 64px;
+    top: 434px;
+    left: 500px;
+}
+
+.img2 {
+    position: absolute;
+    width: 150px;  
+    height: 33px;
+    top: 329px;
+    left: 150px;
+}
+
+
+.img3 {
+    position: absolute;
+    width: 63.02px;   
+    height: 64px;
+    top: 242px;
+    left: 1200px;
+}
+
+
+.img1 {
+    position: absolute;
+    width: 217px;
+    height: 47px;
+    top: 433px;
+    left: 1000px;
+}
+
+
+
+
+.banniere .contenu{
+    max-width: 70%;
+    text-align: center;
+}
+
+
+.banniere .contenu h2{
+    color: #fff;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: none;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+
+
+.banniere .contenu p{
+    margin-bottom: 0;
+    text-align: center;
+}
+
+
+.banniere .contenu p:nth-child(2){
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.btn-contact2 {
+    padding: 10px 50px;
+    background: transparent;
+    border: 3px solid #ffffff;
+    border-radius: 30px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-left: 40px;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.btn-contact2:hover {
+    background: #fff;
+    color: #122033;
+}
+
+.partenaire-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: transparent;
+    margin: 0; /* Supprime tous les margins */
+    transform: translateY(-200px); /* Remonte la section de 50px pour compenser */
+}
+
+.partenaire-container {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 24px;
+    padding: 20px 48px;
+    gap: 48px;
+}
+
+.partenaire-left {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+.partenaire-left h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+.vector-vert {
+    width: 120px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+.partenaire-paragraphe {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 18px;
+    line-height: 1.7;
+    font-weight: 100;
+}
+
+.partenaire-paragraphe strong {
+    font-weight: 700;
+}
+
+.partenaire-right {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+.img-partenaire {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 16px;
+    margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+    .partenaire-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 8vw;
+        gap: 32px;
+    }
+    .partenaire-right {
+        width: 100%;
+        justify-content: center;
+    }
+    .img-partenaire {
+        max-width: 90vw;
+    }
+    .partenaire-left {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.mission-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0 40px 0;
+    background: transparent;
+    transform: translateY(-200px);
+}
+
+.mission-container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.mission-title {
+    text-align: left;
+    align-self: flex-start;
+}
+
+.mission-vector{
+    text-align: left;
+    align-self: flex-start;
+}
+
+.valeurs-vector{
+    text-align: left;
+    align-self: flex-start;
+}
+
+.mission-vector-fin {
+    width: 220px !important;   /* ou la largeur que tu veux */
+    min-width: 0 !important;
+    max-width: none !important;
+    height: auto !important;
+    display: block;
+}
+
+.mission-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.mission-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 220px;
+    margin-top: 0;
+    margin-right: 24px;
+}
+
+.mission-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.mission-vector {
+    width: 120px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+.mission-card {
+    background: rgba(255,255,255,0.12);
+    border: 2px solid #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 32px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+}
+
+.mission-cercle {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 18px;
+}
+
+.mission-cercle2 {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 18px;
+    margin-top: 18px;
+}
+
+.mission-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.mission-card-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.mission-vector-fin {
+    width: 60px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.mission-img {
+    width: 260px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.mission-img2 {
+    width: 260px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1100px) {
+    .mission-cards {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        gap: 24px;
+    }
+    .mission-card {
+        max-width: 400px;
+        width: 90vw;
+        margin: 0 auto;
+    }
+}
+
+.valeurs-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0 40px 0;
+    background: transparent;
+    transform: translateY(-200px);
+}
+
+.valeurs-container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.valeurs-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 8px;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.valeurs-vector {
+    width: 120px;
+    height: auto;
+    margin-bottom: 24px;
+}
+
+.valeurs-cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.valeurs-card {
+    background: rgba(255,255,255,0.12);
+    border: 2px solid #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 32px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+}
+
+.valeurs-img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 18px;
+}
+
+.valeurs-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.valeurs-card-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+@media (max-width: 1100px) {
+    .valeurs-cards {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        gap: 16px;
+    }
+    .valeurs-card {
+        max-width: 400px;
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .valeurs-title {
+        text-align: center;
+        align-self: center;
+    }
+}
+
+.domaine-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background: transparent;
+}
+
+.img-domaine {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 16px;
+    margin-top: 40px;
+}
+
+.domaine-container {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 24px;
+    padding: 20px 48px;
+    gap: 48px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+@media (max-width: 900px) {
+    .domaine-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 8vw;
+        gap: 32px;
+    }
+}
