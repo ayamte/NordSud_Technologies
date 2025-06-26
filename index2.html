@@ -55,7 +55,7 @@
     <div class="contenu">  
       <h2 class="playfair">Nous connectons votre vision à<br>des technologies puissantes et fiables.</h2>  
       <p>De la digitalisation à l'optimisation, nos solutions s'adaptent à vos<br> besoins pour garantir performance et fiabilité</p>  
-      <a href="#" class="btn-contact2">Contactez-nous</a>  
+      <a href="contact.html" class="btn-contact2">Contactez-nous</a>  
     </div>  
   </section>  
   
@@ -159,7 +159,7 @@
       </div>  
       <div class="choix-right">    
         <div class="choix-item dropdown-item">  
-          <div class="choix-item-header">    
+         <div class="choix-item-header" onclick="toggleDropdown(this)">     
             Une équipe d'experts certifiés et à l'écoute    
             <span class="dropdown-arrow">&#9660;</span>  
           </div>    
@@ -168,7 +168,7 @@
           </div>    
         </div>    
         <div class="choix-item dropdown-item">    
-          <div class="choix-item-header">    
+          <div class="choix-item-header" onclick="toggleDropdown(this)">      
             Des solutions personnalisées et évolutives    
             <span class="dropdown-arrow">&#9660;</span>    
           </div>    
@@ -177,7 +177,7 @@
           </div>    
         </div>    
         <div class="choix-item dropdown-item">    
-          <div class="choix-item-header">    
+          <div class="choix-item-header" onclick="toggleDropdown(this)">      
             Un engagement envers la qualité et la satisfaction client    
             <span class="dropdown-arrow">&#9660;</span>    
           </div>    
@@ -186,7 +186,7 @@
           </div>    
         </div>    
         <div class="choix-item dropdown-item">    
-          <div class="choix-item-header">    
+          <div class="choix-item-header" onclick="toggleDropdown(this)">      
             Une veille technologique permanente pour anticiper vos besoins    
             <span class="dropdown-arrow">&#9660;</span>    
           </div>    
@@ -288,6 +288,20 @@
         arrow.classList.toggle('rotate');  
       });  
     });  
+
+    function toggleDropdown(header) {
+    const dropdownContent = header.nextElementSibling; // Sélectionne le contenu suivant
+    const parentItem = header.parentElement; // Sélectionne l'élément parent
+
+    // Vérifiez si le contenu est déjà affiché
+    if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none"; // Masquer
+        parentItem.classList.remove("active"); // Retirer la classe active
+    } else {
+        dropdownContent.style.display = "block"; // Afficher
+        parentItem.classList.add("active"); // Ajouter la classe active
+    }
+}
   </script>  
   
 </body>  

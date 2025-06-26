@@ -318,12 +318,13 @@ header {
 .banniere {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    max-height: 150vh;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 100px 0; /* Ajustez si nécessaire */
-    margin-top: 0; /* Retirez toute marge négative */
+    margin-top: 50px; /* Retirez toute marge négative */
+    margin-bottom: 20px;
 }
 
 .banniere .contenu {
@@ -823,15 +824,14 @@ header {
     transition: transform 0.3s ease;  
 }  
   
-/* Afficher le contenu au survol (ou au clic avec JS) */  
-.dropdown-item:hover .dropdown-content {  
-    display: block; /* Affiche le contenu au survol */  
-}  
-  
-/* Rotation de la flèche au survol */  
-.dropdown-item:hover .dropdown-arrow {  
-    transform: rotate(180deg);  
-}  
+.dropdown-item.active .dropdown-content {
+    display: block;
+}
+
+
+.dropdown-item.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
   
 /* Ajustement du padding du choix-item pour englober le header et le contenu */  
 .choix-item {  
